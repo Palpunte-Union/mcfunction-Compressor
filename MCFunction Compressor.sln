@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCFunction Compressor", "MCFunction Compressor.csproj", "{9F8D7D73-FA5E-4297-8292-35DA03A46091}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F8D7D73-FA5E-4297-8292-35DA03A46091}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8D7D73-FA5E-4297-8292-35DA03A46091}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8D7D73-FA5E-4297-8292-35DA03A46091}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8D7D73-FA5E-4297-8292-35DA03A46091}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85AD0120-E18B-47B8-B82D-DAFA725B29FE}
+	EndGlobalSection
+EndGlobal
