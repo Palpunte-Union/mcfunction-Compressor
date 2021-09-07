@@ -11,7 +11,7 @@ namespace MCFunction_Compressor
     {
         private Point mousePoint;
 
-        string defaultCommand = "summon minecraft:falling_block ~ ~2 ~ {Motion:[0.0, 0.1, 0.0],BlockState:{Name:\"minecraft:stone\",Time:1,DropItem:false},Passengers:[{id:\"minecraft:snowball\",Passengers:[{id:\"minecraft:snowball\",Passengers:[{id:\"minecraft:falling_block\",BlockState:{Name:\"minecraft:stone\"},Time:1,DropItem:false,Passengers:[{id:\"minecraft:snowball\",Passengers:[{id:\"minecraft:snowball\",Passengers:[{id:\"minecraft:falling_block\",BlockState:{Name:\"minecraft:stone\"},Time:1,DropItem:false%Command%}]}]}]}]}]}]}";
+        string defaultCommand = "summon minecraft:falling_block ~ ~2 ~ {Motion:[0.0, 0.1, 0.0],BlockState:{Name:\"minecraft:stone\",Time:1,DropItem:false},Passengers:[{id:\"minecraft:snowball\",Passengers:[{id:\"minecraft:snowball\",Passengers:[{id:\"minecraft:falling_block\",BlockState:{Name:\"minecraft:stone\"},Time:1,DropItem:false%Command%}]}]}]}";
         string tempCommand = ",Passengers:[{id:\"minecraft:snowball\",Passengers:[{id:\"minecraft:snowball\",Passengers:[{id:\"minecraft:falling_block\",BlockState:{Name:\"minecraft:%CommandBlockType%command_block\",Properties:{facing:down}},Time:1,DropItem:false,TileEntityData:{auto:%Auto%,Command:\"%Command%\"}%NextCommand%}]}]}]";
 
         public MainForm()
@@ -121,7 +121,7 @@ namespace MCFunction_Compressor
                             line = line.Replace("%NextCommand%", tempCommand.Replace("%Command%", (string)al[a]).Replace("%Auto%", auto).Replace("%CommandBlockType%", type));
                         } else
                         {
-                            line = line.Replace("%NextCommand%", tempCommand.Replace("%Command%", (string)al[a]).Replace("%Auto%", "1b").Replace("%CommandBlockType%", "repeating_"));
+                            line = line.Replace("%NextCommand%", tempCommand.Replace("%Command%", (string)al[a]).Replace("%Auto%", "1b").Replace("%CommandBlockType%", "chain_"));
                         }
                     }
                     textBoxResult.Text = line.Replace("%NextCommand%", "");
