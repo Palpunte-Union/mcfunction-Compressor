@@ -52,7 +52,7 @@ namespace MCFunction_Compressor
 
         private void labelExit_MouseEnter(object sender, EventArgs e)
         {
-            labelExit.BackColor = Color.Red;
+            labelExit.BackColor = Color.FromArgb(63, 63, 65);
         }
 
         private void labelExit_MouseLeave(object sender, EventArgs e)
@@ -111,7 +111,7 @@ namespace MCFunction_Compressor
                     }
 
                     al.Reverse();
-                    line = defaultCommand.Replace("%Command%", tempCommand.Replace("%CommandBlockType%", "").Replace("%Auto%", "0b").Replace("%Command%", "fill ~ ~-1 ~ ~ ~" + al.Count + " ~ air"));
+                    line = defaultCommand.Replace("%Command%", tempCommand.Replace("%CommandBlockType%", checkBoxAutoRemove.Checked ? "" : "chain_").Replace("%Auto%", "0b").Replace("%Command%", "fill ~ ~-1 ~ ~ ~" + al.Count + " ~ air"));
                     for (int a = 0; a < al.Count; a++)
                     {
                         if ((a + 1) == al.Count)
@@ -128,6 +128,11 @@ namespace MCFunction_Compressor
                 }
                 catch (Exception) {}
             }
+        }
+
+        private void buttonClipBoard_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(textBoxResult.Text);
         }
     }
 }

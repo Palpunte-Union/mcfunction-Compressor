@@ -41,6 +41,8 @@ namespace MCFunction_Compressor
             this.labelSettings = new System.Windows.Forms.Label();
             this.buttonExport = new System.Windows.Forms.Button();
             this.textBoxResult = new System.Windows.Forms.TextBox();
+            this.buttonClipBoard = new System.Windows.Forms.Button();
+            this.checkBoxAutoRemove = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // comboBox
@@ -57,7 +59,7 @@ namespace MCFunction_Compressor
             this.comboBox.Location = new System.Drawing.Point(12, 189);
             this.comboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(280, 28);
+            this.comboBox.Size = new System.Drawing.Size(227, 28);
             this.comboBox.TabIndex = 0;
             this.comboBox.Text = "インパルス";
             // 
@@ -65,7 +67,7 @@ namespace MCFunction_Compressor
             // 
             this.checkBox.AutoSize = true;
             this.checkBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox.Location = new System.Drawing.Point(349, 196);
+            this.checkBox.Location = new System.Drawing.Point(277, 196);
             this.checkBox.Name = "checkBox";
             this.checkBox.Size = new System.Drawing.Size(74, 19);
             this.checkBox.TabIndex = 1;
@@ -76,7 +78,7 @@ namespace MCFunction_Compressor
             // 
             this.labelExit.Font = new System.Drawing.Font("Segoe MDL2 Assets", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelExit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelExit.Location = new System.Drawing.Point(400, 0);
+            this.labelExit.Location = new System.Drawing.Point(450, 0);
             this.labelExit.Margin = new System.Windows.Forms.Padding(0);
             this.labelExit.Name = "labelExit";
             this.labelExit.Size = new System.Drawing.Size(50, 30);
@@ -91,7 +93,7 @@ namespace MCFunction_Compressor
             // 
             this.labelMinimize.Font = new System.Drawing.Font("Segoe MDL2 Assets", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMinimize.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelMinimize.Location = new System.Drawing.Point(350, 0);
+            this.labelMinimize.Location = new System.Drawing.Point(400, 0);
             this.labelMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.labelMinimize.Name = "labelMinimize";
             this.labelMinimize.Size = new System.Drawing.Size(50, 30);
@@ -108,9 +110,9 @@ namespace MCFunction_Compressor
             this.labelTitle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.labelTitle.Location = new System.Drawing.Point(0, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(348, 30);
+            this.labelTitle.Size = new System.Drawing.Size(397, 30);
             this.labelTitle.TabIndex = 4;
-            this.labelTitle.Text = "MCFUNCTION Compressor";
+            this.labelTitle.Text = "mcfunction Compressor";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelTitle_MouseDown);
             this.labelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelTitle_MouseMove);
@@ -119,7 +121,7 @@ namespace MCFunction_Compressor
             // 
             this.buttonSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSelect.ForeColor = System.Drawing.Color.White;
-            this.buttonSelect.Location = new System.Drawing.Point(349, 106);
+            this.buttonSelect.Location = new System.Drawing.Point(402, 106);
             this.buttonSelect.Name = "buttonSelect";
             this.buttonSelect.Size = new System.Drawing.Size(75, 28);
             this.buttonSelect.TabIndex = 5;
@@ -134,7 +136,7 @@ namespace MCFunction_Compressor
             this.labelURI.ForeColor = System.Drawing.Color.White;
             this.labelURI.Location = new System.Drawing.Point(12, 106);
             this.labelURI.Name = "labelURI";
-            this.labelURI.Size = new System.Drawing.Size(300, 28);
+            this.labelURI.Size = new System.Drawing.Size(350, 28);
             this.labelURI.TabIndex = 6;
             this.labelURI.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -164,7 +166,7 @@ namespace MCFunction_Compressor
             // 
             this.buttonExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExport.ForeColor = System.Drawing.Color.White;
-            this.buttonExport.Location = new System.Drawing.Point(274, 252);
+            this.buttonExport.Location = new System.Drawing.Point(327, 255);
             this.buttonExport.Name = "buttonExport";
             this.buttonExport.Size = new System.Drawing.Size(150, 28);
             this.buttonExport.TabIndex = 9;
@@ -187,8 +189,31 @@ namespace MCFunction_Compressor
             this.textBoxResult.Name = "textBoxResult";
             this.textBoxResult.ReadOnly = true;
             this.textBoxResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxResult.Size = new System.Drawing.Size(426, 226);
+            this.textBoxResult.Size = new System.Drawing.Size(476, 226);
             this.textBoxResult.TabIndex = 10;
+            // 
+            // buttonClipBoard
+            // 
+            this.buttonClipBoard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClipBoard.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonClipBoard.Location = new System.Drawing.Point(149, 255);
+            this.buttonClipBoard.Name = "buttonClipBoard";
+            this.buttonClipBoard.Size = new System.Drawing.Size(141, 28);
+            this.buttonClipBoard.TabIndex = 11;
+            this.buttonClipBoard.Text = "クリップボードにコピー";
+            this.buttonClipBoard.UseVisualStyleBackColor = true;
+            this.buttonClipBoard.Click += new System.EventHandler(this.buttonClipBoard_Click);
+            // 
+            // checkBoxAutoRemove
+            // 
+            this.checkBoxAutoRemove.AutoSize = true;
+            this.checkBoxAutoRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBoxAutoRemove.Location = new System.Drawing.Point(369, 196);
+            this.checkBoxAutoRemove.Name = "checkBoxAutoRemove";
+            this.checkBoxAutoRemove.Size = new System.Drawing.Size(119, 19);
+            this.checkBoxAutoRemove.TabIndex = 12;
+            this.checkBoxAutoRemove.Text = "実行後に自動削除";
+            this.checkBoxAutoRemove.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -196,7 +221,9 @@ namespace MCFunction_Compressor
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(450, 550);
+            this.ClientSize = new System.Drawing.Size(500, 550);
+            this.Controls.Add(this.checkBoxAutoRemove);
+            this.Controls.Add(this.buttonClipBoard);
             this.Controls.Add(this.textBoxResult);
             this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.labelSettings);
@@ -234,6 +261,8 @@ namespace MCFunction_Compressor
         private System.Windows.Forms.Label labelSettings;
         private System.Windows.Forms.Button buttonExport;
         private System.Windows.Forms.TextBox textBoxResult;
+        private System.Windows.Forms.Button buttonClipBoard;
+        private System.Windows.Forms.CheckBox checkBoxAutoRemove;
     }
 }
 
