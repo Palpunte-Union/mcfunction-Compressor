@@ -47,7 +47,19 @@ namespace MCFunction_Compressor
 
         private void labelExit_MouseDown(object sender, MouseEventArgs e)
         {
-            Application.Exit();
+            if (e.Button == MouseButtons.Left)
+            {
+                double opacity = 1.00;
+                while (opacity > 0)
+                {
+                    Opacity = opacity;
+                    opacity -= 0.32;
+                    System.Threading.Thread.Sleep(1);
+                }
+                WindowState = FormWindowState.Minimized;
+                Opacity = 1.0;
+                Application.Exit();
+            }
         }
 
         private void labelExit_MouseEnter(object sender, EventArgs e)

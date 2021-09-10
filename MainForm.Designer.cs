@@ -112,7 +112,7 @@ namespace MCFunction_Compressor
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(397, 30);
             this.labelTitle.TabIndex = 4;
-            this.labelTitle.Text = "mcfunction Compressor";
+            this.labelTitle.Text = "MCFunction Compressor";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.labelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelTitle_MouseDown);
             this.labelTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.labelTitle_MouseMove);
